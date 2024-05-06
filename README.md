@@ -8,13 +8,10 @@ The main method of HarmoniousNumbers checks if any arguments are passed to the c
 
 Both harmoniousPairs and sumOfDivisors start with an int value of 2 in order to skip over 1 so it isn't added to the sum (Aunt Maude would be unhappy if we included it).
 
-Furthermore, there is a hashset of previously used numbers. we're able to assume that if the number has been used already we can just skip over it because the sum of one numbers divisors is going to equal a pair that we have already discovered if it is in the hashset. This means that it is looking while running, so we're keeping iteration to a minimum.
+By checking that i < sum we can make sure that there are no duplicates while also affirming that the smaller number is in front.
 
 The main algorithm - harmoniousPairs pretty much has a time complexity of O(max*sqrt(n))because harmoniousPairs calls sumOfDivisors twice for each number and iterates to max (and sumOfDivisors runs to the sqrt of the current number (n)).
 
-The time complexity of sorting using comparison of an array or list is usually [O(n log n)](https://www.baeldung.com/arrays-sortobject-vs-sortint)
-
-We also need to iterate through the array once more to print, which is O(num of pairs).
 ## Etude PDF Introduction
 Amicable numbers are pairs of numbers such that the sum of the proper divisors of
 each one is equal to the other. The smallest such pair of numbers is 220 and 284.
